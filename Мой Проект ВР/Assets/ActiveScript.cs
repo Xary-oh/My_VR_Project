@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript1 : MonoBehaviour
+public class ActiveScript : MonoBehaviour
 {
     public GameObject sphere;
     void Start()
@@ -13,16 +13,17 @@ public class NewBehaviourScript1 : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            Debug.Log("Sphere Deactivated");
-            sphere.SetActive(false);
+        if (Input.GetKey(KeyCode.A)){
+
+            Debug.Log("Object is activated");
+            sphere.SetActive(true);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("Sphere Activated");
-            sphere.SetActive(true);
+
+            Debug.Log("Object is deactivated");
+            sphere.SetActive(false);
         }
     }
 }
